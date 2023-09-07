@@ -17,12 +17,16 @@ function MoviesList() {
 
   const list = movies.map((movie) => (
     <article key={movie.movie_id} className="col-sm-12 col-md-6 col-lg-3 my-2">
-      <img
-        alt={`${movie.title} Poster`}
-        className="rounded"
-        src={movie.image_url}
-        style={{ width: "100%" }}
-      />
+      { 
+        !movie.image_url ? 
+        <p>Loading</p> : 
+        <img
+          alt={`${movie.title} Poster`}
+          className="rounded"
+          src={movie.image_url}
+          style={{ width: "100%" }}
+        />
+      }
       <Link
         to={`/movies/${movie.movie_id}`}
         className="stretched-link text-dark"
