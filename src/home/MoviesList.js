@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import ErrorAlert from "../shared/ErrorAlert";
 import { listMovies } from "../utils/api";
 
+
+
 function MoviesList() {
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState(null);
@@ -17,20 +19,17 @@ function MoviesList() {
 
   const list = movies.map((movie) => (
     <article key={movie.movie_id} className="col-sm-12 col-md-6 col-lg-3 my-2">
-      { 
-        !movie.image_url ? 
-        <p>Loading</p> : 
-        <img
-          alt={`${movie.title} Poster`}
-          className="rounded"
-          src={movie.image_url}
-          style={{ width: "100%" }}
-        />
-      }
+      <img
+        alt={`${movie.title} Poster`}
+        className="rounded"
+        src={movie.image_url}
+        style={{ width: "100%" }}
+      />
       <Link
         to={`/movies/${movie.movie_id}`}
         className="stretched-link text-dark"
       >
+   
         <h3 className="font-poppins-heading text-center mt-2">{movie.title}</h3>
       </Link>
     </article>

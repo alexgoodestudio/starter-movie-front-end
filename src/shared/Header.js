@@ -1,6 +1,7 @@
 import React from "react";
 import HeaderNav from "./HeaderNav";
 import headerImage from "./header.jpg";
+import image1 from "../images/2.png"
 
 function Header() {
   const style = {
@@ -10,11 +11,9 @@ function Header() {
   };
 
   return (
-    <div
-      className="jumbotron jumbotron-fluid text-white border-bottom border-dark pt-0"
-      style={style}
-    >
-      <HeaderNav />
+    <div >
+      <img src={image1} className="w-100"/>
+      <Header Nav />
       <div className="container">
         <h1 className="display-4">Find your next favorite movie!</h1>
         <p className="lead">
