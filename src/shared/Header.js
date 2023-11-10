@@ -13,7 +13,7 @@ function Header() {
   return (
     <div >
       <img src={image1} className="w-100"/>
-      <Header Nav />
+      <HeaderNav />
       <div className="container">
         <h1 className="display-4">Find your next favorite movie!</h1>
         <p className="lead">
