@@ -7,16 +7,14 @@ function Header() {
   const style = {
     background: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url(${image1})`,
     backgroundPosition: "center",
-    backgroundSize: "100% auto",
   };
-
 
   return (
     <div
-    className="jumbotron jumbotron-fluid text-white border-bottom border-dark pt-0"
+    className="jumbotron jumbotron-fluid text-white border-bottom w-100 border-dark pt-0"
     style={style}
   >
-      {/* <img src={image1} className="w-100"/> */}
+
       <HeaderNav />
       <div className="container">
         <h1 className="display-4">Find your next favorite movie!</h1>
