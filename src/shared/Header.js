@@ -1,7 +1,7 @@
 import React from "react";
 import HeaderNav from "./HeaderNav";
 import headerImage from "./header.jpg";
-import image1 from "../images/2.png"
+import image1 from "../images/3.png"
 
 function Header() {
   const style = {
