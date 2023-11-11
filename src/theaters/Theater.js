@@ -5,7 +5,7 @@ function Theater({ theater }) {
   return (
     <article className="col-12 mb-4">
       <div className="row">
-        <aside className="col">
+        <aside className="col-12 col-md-6">
           <h2>{theater.name}</h2>
           <address>
             {theater.address_line_1}
@@ -14,10 +14,10 @@ function Theater({ theater }) {
             {theater.city}, {theater.state} {theater.zip}
           </address>
         </aside>
-        <section className="col">
+        <section className="col-12 col-md-6">
           <div className="row">
             {theater.movies.map((movie) => (
-              <div key={movie.movie_id} className="col-2">
+              <div key={movie.movie_id} className="col-6 col-md-4 col-lg-2">
                 <Link to={`/movies/${movie.movie_id}`}>
                   <img
                     alt={`${movie.title} Poster`}
